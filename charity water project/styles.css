@@ -1,0 +1,259 @@
+/* Reset default styles and set basic page styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set white background for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: white; /* This removes any blue background */
+}
+
+/* Header styling - using simple CSS instead of flexbox */
+.header {
+  background-color: #003366; /* Changed to dark blue instead of light blue */
+  color: white;
+  padding: 20px; /* Use pixels instead of rem for beginners */
+  overflow: hidden; /* This helps contain floated elements */
+}
+
+/* Float the logo to the left */
+.logo {
+  float: left;
+}
+
+/* Float the navigation to the right */
+.navbar {
+  float: right;
+}
+
+/* Logo styling */
+.logo-image {
+  height: 50px;
+  width: auto;
+}
+
+/* Navigation styling - use inline-block instead of flex */
+.nav-list {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block; /* Put menu items side by side */
+  margin-left: 30px; /* Space between menu items */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 50px; /* Match the logo height for alignment */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Clear the floats after header content */
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main container - use simple pixels instead of rem */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content on the page */
+  padding: 30px; /* Use pixels instead of rem */
+}
+
+/* Hero card styling - add background image behind header and subheading */
+.hero-card {
+  /* Set a dark blue backup color in case image doesn't load */
+  background-color: #003366;
+  
+  /* Add the background image */
+  background-image: url('images.png.jpeg');
+  background-size: cover; /* Make image cover the whole area */
+  background-position: center; /* Center the image nicely */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  
+  padding: 60px 30px; /* Space inside the card */
+  text-align: center; /* Center all text */
+  margin-bottom: 40px; /* Space below the card */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Make the main heading white so it shows up on the background image */
+.hero-card h1 {
+  font-size: 40px; /* Large text size */
+  color: white; /* White text shows up on dark backgrounds */
+  margin-bottom: 20px; /* Space below the heading */
+  text-shadow: 2px 2px 4px black; /* Add shadow to make text easier to read */
+}
+
+/* Make the subheading white so it shows up on the background image */
+.subheadline {
+  font-size: 18px; /* Normal text size */
+  margin-bottom: 30px; /* Space below the text */
+  color: white; /* White text shows up on dark backgrounds */
+  text-shadow: 2px 2px 4px black; /* Add shadow to make text easier to read */
+}
+
+/* Donate button styling - changed to yellow */
+.donate-button {
+  background-color: #ffcc00; /* Yellow button color instead of orange */
+  color: black; /* Black text on yellow background for better readability */
+  padding: 15px 30px; /* Use pixels instead of rem */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  /* Remove transition - keep it simple for beginners */
+}
+
+.donate-button:hover {
+  background-color: #e6b800; /* Darker yellow when hovering */
+}
+
+/* Our story card styling - make it dark blue so white text shows up */
+.our-story-card {
+  background-color: #003366; /* Dark blue background so white text is visible */
+  border: 1px solid #ddd; /* Light gray border around the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 40px; /* Space inside the card */
+  margin-bottom: 40px; /* Space below the card */
+  text-align: center; /* Center all the text */
+}
+
+/* Make the heading white for the dark background */
+.our-story-card h2 {
+  color: white; /* White text on dark blue background */
+  font-size: 32px; /* Make the heading big */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Make all paragraph text white for the dark background */
+.our-story-card p {
+  font-size: 16px; /* Normal text size */
+  color: white; /* White text on dark blue background */
+  max-width: 700px; /* Don't let the text get too wide */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.6; /* Make the text easier to read */
+}
+
+/* Make "Charity: Water" text white and bold */
+.charity-water-text {
+  color: white; /* White text color */
+  font-weight: bold; /* Make it bold so it stands out */
+}
+
+/* Story card styling - use simple pixels */
+.story-card {
+  background-color: white;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  padding: 30px; /* Use pixels instead of rem */
+  margin-bottom: 40px; /* Use pixels instead of rem */
+  overflow: hidden; /* This helps contain floated elements */
+}
+
+/* Float the text to the left, image to the right */
+.story-content {
+  /* Remove flex properties - use simple layout instead */
+}
+
+.story-text {
+  float: left; /* Float text to the left */
+  width: 45%; /* Take up 45% of the width */
+  margin-right: 5%; /* Add space between text and image */
+}
+
+.story-text h2 {
+  color: #003366; /* Changed to dark blue instead of light blue */
+  margin-bottom: 15px; /* Use pixels instead of rem */
+}
+
+.story-text p {
+  margin-bottom: 15px; /* Use pixels instead of rem */
+  color: #666;
+}
+
+.story-image {
+  float: right; /* Float image to the right */
+  width: 50%; /* Take up 50% of the width */
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Clear floats after story content */
+.story-card::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Call to action card - use simple pixels */
+.cta-card {
+  background-color: #003366; /* Changed to dark blue instead of light blue */
+  color: white;
+  padding: 40px; /* Use pixels instead of rem */
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px; /* Use pixels instead of rem */
+}
+
+.cta-card h2 {
+  margin-bottom: 15px; /* Use pixels instead of rem */
+}
+
+.cta-card p {
+  margin-bottom: 30px; /* Use pixels instead of rem */
+  font-size: 16px; /* Use pixels instead of rem */
+}
+
+/* Footer styling - use simple pixels */
+footer {
+  background-color: #333; /* Dark gray background */
+  color: white;
+  text-align: center;
+  padding: 20px; /* Use pixels instead of rem */
+}
+
+/* Make the page responsive for smaller screens */
+@media (max-width: 768px) {
+  /* Stack header elements on small screens */
+  .logo, .navbar {
+    float: none;
+    text-align: center;
+    display: block;
+  }
+  
+  .nav-item {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Stack story text and image on small screens */
+  .story-text, .story-image {
+    float: none; /* Remove floats on mobile */
+    width: 100%; /* Full width on mobile */
+    margin-right: 0; /* Remove margin on mobile */
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+  
+  .hero-card h1 {
+    font-size: 2rem;
+  }
+}
